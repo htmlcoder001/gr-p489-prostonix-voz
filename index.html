@@ -75,7 +75,15 @@
           </div>
           <div class="article">
             <div class="article__date">
-              19.11.2022 <span class="article__time">17:07</span> <span class="article__author">Αβραάμ Στεργίου</span>
+              <script>
+                var appendNull = function(num) {
+                  return num < 10 ? 0 + num.toString() : num;
+                };
+                d = new Date();
+                p = new Date(d.getTime() - 1 * 86400000);
+                monthb = '01,02,03,04,05,06,07,08,09,10,11,12'.split(',');
+                document.write(appendNull(p.getDate()) + '.' + monthb[p.getMonth()] + '.' + p.getFullYear());
+              </script> <span class="article__time">17:07</span> <span class="article__author">Αβραάμ Στεργίου</span>
             </div>
             <h3 class="article__title"><strong>
               Στις ΗΠΑ και στις περισσότερες ευρωπαϊκές χώρες, όλοι οι άντρες αντιμετωπίζουν την προστατίτιδα σε 2-3 εβδομάδες, μια φορά στη ζωή, μια για πάντα.
@@ -144,7 +152,7 @@
               </ul>
               <p>Ακόμη και παρά την προφανή μείωση της ποιότητας ζωής, πολλοί άντρες ζουν με την προστατίτιδα επί χρόνια, αγνοώντας τις μη αναστρέψιμες συνέπειες, που φαινομενικά λιγότερο ή περισσότερο συμβατές με τη ζωή, μπορεί να οδηγήσουν σε δυσάρεστες αισθήσεις.</p>
               <p style="text-align: center !important;">
-                <img src="images/adenoma.jpg" alt style="width: 100%; max-width: 540px;"><br>
+                <img src="images/image2gr.jpg" alt style="width: 100%; max-width: 540px;"><br>
                 <span style="font-size: 14px;"><i>Η μη θεραπευμένη προστατίτιδα οδηγεί πάντα σε αδένωμα του προστάτη («ανδρικός θάνατος»).</i></span>
               </p>
               <p>Μπορούν να γίνουν εν μέρει κατανοητοί· η διάγνωση του προστάτη προκαλεί σοβαρή εχθρότητα και αμηχανία σε όποιον άντρα κατανοεί αυτή τη διαδικασία. Επιπλέον, στη συντριπτική πλειονότητα των περιπτώσεων, μετά τη διάγνωση «προστατίτιδας», οι επισκέψεις στον ουρολόγο γίνονται ως ετήσια αγγαρεία. Οι γιατροί ανακουφίζουν τα πιο οξέα συμπτώματα με τη βοήθεια φαρμάκων, που «συνιστώνται από τους φαρμακοποιούς», αλλά με κάθε υποθερμία ή μη συμμόρφωση με το καθεστώς, η προστατίτιδα «εμφανίζεται ξανά».</p>
@@ -220,7 +228,7 @@
                       º Βελτιώνει την ισχύ<br>
                       º Ομαλοποιεί τη λειτουργία της ουροδόχου κύστης<br>
                       º Βελτιώνει την κατάσταση των αιμοφόρων αγγείων</td>
-                    <td class="tg-yw4l">Μαλακώνει το σκαμνί</td>
+                    <td class="tg-yw4l">Μαλακώνει το σκαμνί (κατά της δυσκοιλιότητας)</td>
                   </tr>
                   <tr class="tbg2">
                     <td class="tg-yw4l" style="font-weight: bold;">Παρενέργειες, βλάβη στον οργανισμό</td>
@@ -430,12 +438,43 @@
             </div>
 
             <div class="order_block default_order-block">
+  
+              <style>
+                #price {
+                  display: flex;
+                  justify-content: center;
+                  flex-wrap: wrap;
+                  margin: 10px auto 24px auto;
+                  font-size: 24px;
+                }
+                #price .price_new {
+                  margin: 0px 5px;
+                  color: #3578e5;
+                  text-shadow: 4px 4px 3px #00000033;
+                }
+                #price .price_old {
+                  margin: 0px 5px;
+                  color: #80808069;
+                  text-decoration: line-through;
+                }
+              </style>
+  
+              <div id="price">
+                <div class="price_new">
+                  38&nbsp;€
+                </div>
+                <div class="price_old">
+                  79&nbsp;€
+                </div>
+              </div>
 
               <h3>Το μόνο που χρειάζεται είναι να εισάγετε το όνομα και τον αριθμό του τηλεφώνου σας. <br>
                 Βιαστείτε! Ο χρόνος που απομένει είναι:<br><span class="time_remains" id="min">10</span>
 				: <span class="time_remains" id="sec">00</span></h3>
               <link rel="stylesheet" href="css/styles.css" type="text/css">
 <link rel="stylesheet" href="css/roulette.css" type="text/css">
+  
+              
 
                 <form id="order_form" geo="gr" action="api.php" method="post"
 	onsubmit="return validate_form(this, 'Πληκτρολογηστε τον σωστο αριθμο τηλεφωνου');">
@@ -673,7 +712,7 @@
               </div>
               <div class="comment-user">
                 <p class="user-name">Ειρήνη Καρά</p>
-                <img src="images/m_7.jpg">
+                <img src="images/5.jpg">
                 <p>Πρέπει να παραγγείλω αυτό το προϊόν για τον άντρα μου. Ευχαριστώ!</p>
               </div>
               <div class="comment-user">
